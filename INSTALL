@@ -1,0 +1,3 @@
+Copy lib/(TARGET)/libmudcgi.a to your freebasic lib/(TARGET) directory.
+Copy inc/mudcgi.bi to your freebasic inc directory.
+Copy the inc/mudcgi directory to your freebasic inc directory
