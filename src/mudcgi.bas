@@ -93,8 +93,10 @@ end extern
 
 sub info()
 
-    headers.ContentType("text/html")
-    headers.EndHeaders
+    'headers.ContentType("text/html")
+    'headers.EndHeaders
+
+    Response.Clear()
 
     var doc = new html.Document("MudCGI Information")
     doc->body()->appendChild("h2",ext.xml.text)->setText = "mudCGI Version:"
@@ -143,7 +145,7 @@ sub info()
     doc->body()->appendChild("p",ext.xml.text)->setText =   "Host: " & environ("HTTP_HOST")
     doc->body()->appendChild("p",ext.xml.text)->setText =   "Remote Address: " & environ("REMOTE_ADDR")
     #endif
-    print *doc
+    Response.Write *doc
     end
 
 end sub

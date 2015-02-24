@@ -83,6 +83,7 @@ end namespace
 namespace Response
   declare sub AddHeader(byref h as string, byref p as string)
   declare sub Write(byref p as string)
+  declare sub BinaryWrite(byval buf as ubyte ptr, byval buflen as uinteger)
   declare sub Clear()
   declare sub _End(byval endit as integer = 0)
 end namespace
